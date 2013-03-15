@@ -9,7 +9,7 @@ class Topic(models.Model):
     number = models.IntegerField()
 
     class Meta:
-        order_with_respect_to = 'number'
+        ordering = ['number']
 
 
 class Question(models.Model):
@@ -18,7 +18,7 @@ class Question(models.Model):
     topic = models.ForeignKey(Topic, related_name="questions")
     header_picture = models.ImageField(upload_to=photos_path, blank=True)
     number = models.IntegerField()
-    related_questions = models.ManyToManyField("self", related_name="related_questions")
+    related_questions = models.ManyToManyField("self", related_name="related_questions", blank=True, null=True)
 
     class Meta:
-        order_with_respect_to = 'number'
+        ordering = ['number']
