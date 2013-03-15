@@ -1,1 +1,2 @@
+django<=1.5
 django-tinymce==1.5.1b4
