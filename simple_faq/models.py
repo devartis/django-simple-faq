@@ -11,6 +11,9 @@ class Topic(models.Model):
     class Meta:
         ordering = ['number']
 
+    def __unicode__(self):
+        return u'(%s) %s' % (self.number, self.text, )
+
 
 class Question(models.Model):
     text = models.CharField(max_length=200)
@@ -22,3 +25,6 @@ class Question(models.Model):
 
     class Meta:
         ordering = ['number']
+
+    def __unicode__(self):
+        return u'(%s) %s' % (self.number, self.text, )
