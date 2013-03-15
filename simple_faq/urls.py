@@ -5,7 +5,7 @@ from simple_faq.views import Topics
 
 urlpatterns = patterns(
     '',
-    url(r'^faq/', Topics.as_view(), 'faq'),
+    url(r'^', Topics.as_view(), name='faq'),
 )
 
 __author__ = 'lgomez'
