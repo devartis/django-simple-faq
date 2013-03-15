@@ -1,0 +1,5 @@
+{% for question in topic.questions %}
+    {% include 'question_detail.html' with question=question %}
+{% empty %}
+    <li>{% blocktrans %}No questions available!{% endblocktrans %}</li>
+{% endfor %}
