@@ -16,7 +16,7 @@ setup(
     description='Simple FAQ app for django',
     long_description=open('README.md').read(),
 
-    download_url='http://pypi.python.org/packages/source/D/django-simple-faq/django-simple-faq-%s.tar.gz' % version,
+    download_url='http://pypi.python.org/packages/source/d/django-simple-faq/django-simple-faq-%s.tar.gz' % version,
 
     install_requires=install_requires,
 
