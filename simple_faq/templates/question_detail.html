@@ -1,4 +1,8 @@
 <li>
     <div id="{{ question.id }}" class="question">{{ question.text }}</div>
-    <div class="answer">{{ question.answer_text }}</div>
+    <div class="answer">
+        {% autoescape off %}
+        {{ question.answer_text }}
+        {% endautoescape %}
+    </div>
 </li>
