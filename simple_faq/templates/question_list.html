@@ -1,7 +1,11 @@
 {% load i18n %}
 
+<h2 id="topic-{{ topic.id }}" class="topic">{{ topic.text }}</h2>
 {% for question in topic.questions.all %}
     {% include 'question_detail.html' with question=question %}
 {% empty %}
-    <li>{% blocktrans %}No questions available!{% endblocktrans %}</li>
+    <a id="no-question-anchor-{{ topic.id }}" class="no_question_anchor">
+        <img id="no-question-image-{{ topic.id }}" class="no_question_image" src="">
+    </a>
+    <div id="no-question-answer-{{ topic.id }}" class="no_question_answer">{% blocktrans %}No questions available!{% endblocktrans %}</div>
 {% endfor %}

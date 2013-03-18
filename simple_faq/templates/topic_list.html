@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
-
 {% load i18n %}
 
 {% block content %}
 
-    <ul class="question_list">
+    <div id="faq" class="faq">
     {% for topic in topics %}
         {% include 'question_list.html' with topic=topic%}
     {% empty %}
-        <li>{% blocktrans %}No topics available!{% endblocktrans %}</li>
+        <h2 id="no-topic" class="no_topic">{% blocktrans %}No topics available!{% endblocktrans %}</h2>
+        <a id="no-question-anchor" class="no_question_anchor">
+        <img id="no-question-image" class="no_question_image" src="">
+        </a>
+        <div id="no-question-answer" class="no_topic"></div>
     {% endfor %}
-    </ul>
+    </div>
 
 {% endblock content %}
