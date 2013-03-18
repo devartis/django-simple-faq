@@ -1,7 +1,7 @@
 from django.db import models
 from tinymce import models as tinymce_models
 
-photos_path = "/simple-faq/"
+photos_path = "simple-faq/"
 
 
 class Topic(models.Model):
